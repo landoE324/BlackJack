@@ -141,3 +141,20 @@ function reduceAce(playerSum, playerAceCount) {
     }
     return playerSum;
 }
+
+function reset() {
+    dealerSum = 0;
+    playerSum = 0;
+    dealerAceCount = 0;
+    playerAceCount = 0;
+    canHit = true;
+    document.getElementById("dealer-cards").innerHTML = "";
+    document.getElementById("player-cards").innerHTML = "";
+    document.getElementById("dealer-sum").innerText = "";
+    document.getElementById("player-sum").innerText = "";
+    document.getElementById("results").innerText = "";
+    document.getElementById("hidden").src = "";
+    buildDeck();
+    shuffleDeck();
+    startGame();
+}
