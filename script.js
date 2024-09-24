@@ -1,3 +1,5 @@
+// Just a project for fun
+
 var dealerSum = 0;
 
 var playerSum = 0;
@@ -8,7 +10,7 @@ var playerAceCount = 0;
 var hidden;
 var deck;
 
-var canHit = true; //allows player to draw while Sum is less than 21
+var canHit = true;
 
 window.onload = function() {
     buildDeck();
@@ -140,4 +142,21 @@ function reduceAce(playerSum, playerAceCount) {
         playerAceCount -= 1;
     }
     return playerSum;
+}
+
+function reset() {
+    dealerSum = 0;
+    playerSum = 0;
+    dealerAceCount = 0;
+    playerAceCount = 0;
+    canHit = true;
+    document.getElementById("dealer-cards").innerHTML = "";
+    document.getElementById("player-cards").innerHTML = "";
+    document.getElementById("dealer-sum").innerText = "";
+    document.getElementById("player-sum").innerText = "";
+    document.getElementById("results").innerText = "";
+    document.getElementById("hidden").src = "";
+    buildDeck();
+    shuffleDeck();
+    startGame();
 }
