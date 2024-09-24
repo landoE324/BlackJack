@@ -16,6 +16,7 @@ window.onload = function() {
     buildDeck();
     shuffleDeck();
     startGame();
+    document.getElementById("reset").addEventListener("click", reset);
 }
 
 function buildDeck() {
@@ -70,7 +71,6 @@ function startGame() {
 console.log(playerSum);
 document.getElementById("hit").addEventListener("click", hit);
 document.getElementById("stay").addEventListener("click", stay);
-
 }
 
 function hit() {
